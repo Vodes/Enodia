@@ -1,11 +1,10 @@
 package pw.vodes.enodia.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.lightColorScheme
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.unit.dp
 
 private val LightColorScheme = lightColorScheme(
     primary = primaryLight,
@@ -102,6 +101,14 @@ internal fun AppTheme(
         )
     }
 }
+
+val AppShapes = Shapes(
+    extraSmall = RoundedCornerShape(2.dp),
+    small = RoundedCornerShape(4.dp),
+    medium = RoundedCornerShape(8.dp),
+    large = RoundedCornerShape(16.dp),
+    extraLarge = RoundedCornerShape(32.dp)
+)
 
 @Composable
 internal expect fun SystemAppearance(isDark: Boolean)
